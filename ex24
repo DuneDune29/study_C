@@ -1,0 +1,28 @@
+#include <stdio.h>
+#include <string.h>
+
+struct book {
+  char title[10];
+  char author[10];
+  int price;
+};
+
+int main(void) {
+  struct book my_book = { "C언어", "홍길동", 35000 };
+  
+  struct book* ptr_book; // 구조체 포인터 선언
+  ptr_book = &my_book;
+
+  strcpy((*ptr_book).title, "C문법");
+  // 참조 연산자(*)를 이용하는 방법
+  strcpy(ptr_book->author, "이순신");
+  // 화살표 연산자(->)를 이용하는 방법
+  my_book.price = 32000;
+  // 구조체 변수를 이용한 직접 수정
+
+  printf("책의 제목은 %s, 가격은 %d원 \n", my_book.title, my_book.price);
+
+  return 0;
+}
+-------------------------------------------------------------------
+책의 제목은 C문법, 가격은 32000원
