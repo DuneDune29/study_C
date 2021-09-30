@@ -1,0 +1,21 @@
+#include <stdio.h>
+
+struct book {
+  char title[10];
+  char author[10];
+  int price;
+};
+
+int main(void) {
+  struct book text_book[3] = {
+    { "국어", "홍길동", 15000 },
+    { "영어", "이순신", 18000 },
+    { "수학", "강감찬", 10000 }
+  }; // 구조체 배열
+
+  printf("%s, %s, %s\n", text_book[0].title,
+      text_book[1].title, text_book[2].title);
+  return 0;
+}
+---------------------------------------------
+국어, 영어, 수학
