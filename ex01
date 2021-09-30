@@ -1,0 +1,7 @@
+#include <stdio.h>
+#define TEXT "Hello, C~"
+
+int main(void) {
+ printf(TEXT);
+ return 0;
+}
