@@ -1,0 +1,23 @@
+#include <stdio.h>
+
+typedef struct {
+  char title[10];
+  char author[10];
+  int price;
+} TEXTBOOK;
+
+int main(void){
+  TEXTBOOK my_book = {"Spring", "홍길동", 28000};
+  TEXTBOOK java_book = {
+    .title = "Java",
+    .price = 30000
+  };
+
+  printf("my_book의 제목은 %s, 가격은 %d원 \n",
+    my_book.title, my_book.price);
+  printf("java_book의 제목은 %s, 가격은 %d \n",
+    java_book.title, java_book.price);
+
+  return 0;
+}
+
