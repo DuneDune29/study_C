@@ -1,0 +1,30 @@
+#include <stdio.h>
+
+void local(void); // 함수 원형 선언
+int var; // 전역 변수 선언
+
+int main(void) {
+  printf("전역 변수 var의 초기값은 %d \n", var);
+  
+  int i = 5;
+  int var = 10; // 지역 변수 선언
+  printf("main() 함수 내의 지역 변수 var의 값은 %d \n", var);
+
+  if(i < 10){
+    local();
+    printf("변수 var의 값은 %d \n", var);
+  }
+  return 0;
+}
+
+void local(void){
+  var = 20; // 전역 변수의 값 변경
+  printf("local() 함수 내에서 접근한 변수 var의 값은 %d \n", var); // 전역변수에 접근
+}
+
+int bigNum(int num01, int num02) {
+  if(num01 >= num02)
+    return num01;
+  else
+    return num02;
+}
