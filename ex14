@@ -1,0 +1,14 @@
+#include <stdio.h>
+
+int main(void) {
+  int arr[3] = { 11, 22, 33 };
+  int * ptr = arr;
+
+  printf("%p, %p \n", ptr, &arr[0]);
+  printf("%p, %p \n", ptr+1, &arr[1]);
+  printf("%p, %p \n", ptr+2, &arr[2]);
+  
+  return 0;
+}
+
+--------------------
