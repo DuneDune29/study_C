@@ -1,0 +1,16 @@
+#include <stdio.h>
+
+int main(void) {
+  int i;
+  int arr[3] = { 11, 22, 33 };
+  int * ptr = arr;
+
+  for(i=0; i<3; i++) {
+    printf("%d\n", *(ptr+i));
+  }
+  return 0;
+}
+------------------------------
+11
+22
+33
