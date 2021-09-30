@@ -1,0 +1,19 @@
+#include <stdio.h>
+
+int main(void) {
+  int num = 10;
+  int* ptr_num = &num;
+
+  printf("포인터의 크기는 %d \n", sizeof(ptr_num));
+  printf("포인터 ptr_num이 가리키고 있는 주소는 %#x \n,ptr_num");
+  printf("포인터 ptr_num이 가리키고 있는 주소에 저장된 값은 %d \n", *ptr_num);
+
+  return 0;
+}
+-----------------------------------------------
+포인터의 크기는 8
+포인터 ptr_num이 가리키고 있는 주소는 0x7fff76ab7bc8
+포인터 ptr_num이 가리키고 있는 주소에 저장된 값은 10
+
+메모리 주소는 기본적으로 64비트 운영함
+주소는 16진수이니 %#x로 출력
