@@ -1,0 +1,19 @@
+#include <stdio.h>
+void local(int*);
+
+int main(void) {
+  
+  int var = 10;
+  printf("var의 값은 %d \n", var);
+
+  local(&var); // Call by Reference
+  printf("var의 값은 %d \n", var);
+  return 0;
+}
+
+void local(int* num) {
+  *num += 10;
+}
+-----------------------------------
+var의 값은 10
+var의 값은 20
