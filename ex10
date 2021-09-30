@@ -1,0 +1,14 @@
+#include <stdio.h>
+
+int main(void) {
+  int num = 10;
+
+  printf("num의 값은 %d \n", num);
+  printf("num의 주소는 %p \n", &num);
+  
+  return 0;
+}
+-----------------------------------------
+num의 값은 10
+num의 주소는 0x7ffe9486a404   --> 0헥사데시말    0o가 오면 0옥타데시말
+주소를 의미하는 연산자가 &이며 %p가 
